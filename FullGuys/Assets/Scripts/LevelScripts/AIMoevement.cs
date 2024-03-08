@@ -3,12 +3,11 @@ using UnityEngine.AI;
 
 public class AIMoevement : MonoBehaviour
 {
-    private NavMeshAgent _agent;
     [SerializeField] private Transform _goPoint;
+    private NavMeshAgent _agent;
 
     void Start() => _agent = GetComponent<NavMeshAgent>();
 
-    // Update is called once per frame
     void Update()
     {
         _agent.SetDestination(_goPoint.position);

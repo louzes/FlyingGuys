@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelect : MonoBehaviour
 {
-    private GameObject[] _characters;
-    private int _index;
+    protected GameObject[] _characters;
+    protected int _index;
     void Start()
     {
         _index = PlayerPrefs.GetInt("CharacterSelect");
@@ -18,7 +18,7 @@ public class CharacterSelect : MonoBehaviour
         {
             obj.SetActive(false);
         }
-        if (_characters[_index])
+        if (_index >= 0 && _index < _characters.Length)
         {
             _characters[_index].SetActive(true);
         }
@@ -45,7 +45,7 @@ public class CharacterSelect : MonoBehaviour
         }
         _characters[_index].SetActive(true);
     }
-    public void StartScene()
+    public void ActivateCharacter()
     {
         PlayerPrefs.SetInt("CharacterSelect", _index);
         SceneManager.LoadScene(1);
