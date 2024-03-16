@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -4206329872668021278}
   m_Layer: 0
   m_Name: Monkeydong_Big
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

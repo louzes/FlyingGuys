@@ -29,8 +29,8 @@ public class ArenaLogic : MonoBehaviour
     {
         if (TriggerWall != null)
         {
-            print("Wall is down");
             Destroy(TriggerWall);
+            print("Wall is down");
         }
             
         if (gameObject.layer == 7) //water
@@ -48,7 +48,6 @@ public class ArenaLogic : MonoBehaviour
             }
         }
             
-
         if (gameObject.layer == 8 && _tpDestination != null) //teleport
         {
             print("Teleport!");
@@ -79,17 +78,7 @@ public class ArenaLogic : MonoBehaviour
                     }
                 }
             }          
-        }
-        
-    }
-    private void OnCollisionStay(Collision collision)
-    {
-        //print(1);
-        //if (gameObject.layer == 11) //platform
-        //{
-        //    print(2);
-        //    collision.transform.SetParent(transform);
-        //}        
+        }      
     }
     private void OnDrawGizmos()
     {
