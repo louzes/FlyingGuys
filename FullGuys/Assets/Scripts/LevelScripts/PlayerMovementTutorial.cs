@@ -45,7 +45,6 @@ public class PlayerMovementTutorial : MonoBehaviour
 
     private void Update()
     {
-        // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
 
         MyInput();
@@ -68,7 +67,6 @@ public class PlayerMovementTutorial : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        // when to jump
         if(Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;

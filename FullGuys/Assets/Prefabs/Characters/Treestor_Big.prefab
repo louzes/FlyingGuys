@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3313970653177009132}
   - component: {fileID: 1326225352388664777}
-  - component: {fileID: 5177341186901196709}
   - component: {fileID: -2912307700423306211}
-  - component: {fileID: -3710575687806322617}
+  - component: {fileID: 1176299728294826330}
   m_Layer: 0
   m_Name: Treestor_Big
   m_TagString: Untagged
@@ -59,28 +58,6 @@ CapsuleCollider:
   m_Height: 5
   m_Direction: 1
   m_Center: {x: 0.12, y: 2.3, z: 0}
---- !u!195 &5177341186901196709
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991621087078153679}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 7
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!54 &-2912307700423306211
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -108,7 +85,7 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &-3710575687806322617
+--- !u!114 &1176299728294826330
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,10 +94,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1991621087078153679}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5514e704504ff6a40860254a7411ddc6, type: 3}
+  m_Script: {fileID: 11500000, guid: f2f95f6ae5d4e794a834362a9f57d8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _goPoint: {fileID: 8130410640366750626, guid: 846cfdce86e2b194a8f1c8cf16026f24, type: 3}
+  _speed: 5
 --- !u!1001 &7116887393076304307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177,13 +154,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: 03_Treestor_H
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 608b5a873bd718c4f92fe913c4e4032d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3342a01256f5acb47a416d48df3693e2, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 608b5a873bd718c4f92fe913c4e4032d, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 608b5a873bd718c4f92fe913c4e4032d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4902742178194795110}
   m_SourcePrefab: {fileID: 100100000, guid: 608b5a873bd718c4f92fe913c4e4032d, type: 3}
 --- !u!4 &7300047052576767576 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 608b5a873bd718c4f92fe913c4e4032d, type: 3}
   m_PrefabInstance: {fileID: 7116887393076304307}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7927789660611929314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 608b5a873bd718c4f92fe913c4e4032d, type: 3}
+  m_PrefabInstance: {fileID: 7116887393076304307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4902742178194795110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7927789660611929314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c94ce859727d0499549b39e8c5f374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3526070568691821360}
   - component: {fileID: 8697444783682834758}
-  - component: {fileID: 7753868590461573028}
-  - component: {fileID: 2478977593958598128}
   - component: {fileID: 913117519129932267}
+  - component: {fileID: 7913079930554320675}
   m_Layer: 0
   m_Name: Fishguard_Big
   m_TagString: Untagged
@@ -27,15 +26,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8072735861503093484}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 49.04, y: 4.18, z: 81.45}
+  m_LocalRotation: {x: -0, y: 0.98627657, z: -0, w: 0.16510175}
+  m_LocalPosition: {x: 49.144356, y: 4.18, z: 81.347084}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 831456981398952535}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 160.994, z: 0}
 --- !u!54 &8697444783682834758
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -63,41 +62,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!195 &7753868590461573028
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8072735861503093484}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 7
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &2478977593958598128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8072735861503093484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5514e704504ff6a40860254a7411ddc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _goPoint: {fileID: 8130410640366750626, guid: 846cfdce86e2b194a8f1c8cf16026f24, type: 3}
 --- !u!136 &913117519129932267
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -121,6 +85,19 @@ CapsuleCollider:
   m_Height: 5
   m_Direction: 1
   m_Center: {x: 0.12, y: 2.3, z: 0}
+--- !u!114 &7913079930554320675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8072735861503093484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f95f6ae5d4e794a834362a9f57d8a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 5
 --- !u!1001 &865628759962746300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -181,11 +158,39 @@ PrefabInstance:
       propertyPath: m_Name
       value: "FishGuard_\u0412"
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 44c5f95f341a41044824919b30cc7a0d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3342a01256f5acb47a416d48df3693e2, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 44c5f95f341a41044824919b30cc7a0d, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 44c5f95f341a41044824919b30cc7a0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8639289635182886172}
   m_SourcePrefab: {fileID: 100100000, guid: 44c5f95f341a41044824919b30cc7a0d, type: 3}
+--- !u!1 &54673304761254125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 44c5f95f341a41044824919b30cc7a0d, type: 3}
+  m_PrefabInstance: {fileID: 865628759962746300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8639289635182886172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54673304761254125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c94ce859727d0499549b39e8c5f374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &831456981398952535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 44c5f95f341a41044824919b30cc7a0d, type: 3}

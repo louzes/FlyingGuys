@@ -11,8 +11,6 @@ public class ThirdPersonCam : MonoBehaviour
 
     public float rotationSpeed;
 
-    public Transform combatLookAt;
-
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;

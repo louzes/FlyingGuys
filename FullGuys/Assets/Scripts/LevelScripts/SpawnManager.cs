@@ -18,7 +18,7 @@ public class SpawnManager : MonoBehaviour
         {
             var RandomSpawn = Random.Range(0, _spawnPoints.Count);
             Instantiate(_characters[i], _spawnPoints[RandomSpawn].transform.position, _characters[i].transform.rotation);
-            //_spawnPoints.RemoveAt(RandomSpawn);
+            _spawnPoints.RemoveAt(RandomSpawn);
         }
     }
 }
