@@ -35,23 +35,19 @@ public class ArenaLogic : MonoBehaviour
             
         if (gameObject.layer == 7) //water
         {
-            print(384384);
-            //Destroy(other.transform.parent != null ? other.transform.parent.gameObject : gameObject);
             if (other.transform.parent != null)
             {
                 Destroy(other.transform.parent.gameObject);
                 print(other.transform.parent + "is destroyed");
+                return; 
             }
-            else
-            {
-                Destroy(other);
-            }
+            Destroy(other);
         }
             
         if (gameObject.layer == 8 && _tpDestination != null) //teleport
         {
-            print("Teleport!");
             other.transform.parent.position = _tpDestination.transform.position;
+            print("Teleport!");
         }
             
     }

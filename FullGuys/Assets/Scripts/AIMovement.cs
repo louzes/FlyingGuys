@@ -53,8 +53,8 @@ public class AIMovement : MonoBehaviour
             wayPoints = Way.RouteTwo;
         }
     }
-    public void SetPoint(Transform pointParent)
-    {
-        var _points = new Transform[pointParent.childCount];
-    }
+    //public void SetPoint(Transform pointParent)
+    //{
+    //    var _points = new Transform[pointParent.childCount];
+    //}
 }

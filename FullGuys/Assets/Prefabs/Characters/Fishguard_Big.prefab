@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3526070568691821360}
   - component: {fileID: 8697444783682834758}
-  - component: {fileID: 913117519129932267}
   - component: {fileID: 7913079930554320675}
   m_Layer: 0
   m_Name: Fishguard_Big
@@ -62,29 +61,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!136 &913117519129932267
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8072735861503093484}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.15
-  m_Height: 5
-  m_Direction: 1
-  m_Center: {x: 0.12, y: 2.3, z: 0}
 --- !u!114 &7913079930554320675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +149,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 44c5f95f341a41044824919b30cc7a0d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8639289635182886172}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 44c5f95f341a41044824919b30cc7a0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1951527736063031587}
   m_SourcePrefab: {fileID: 100100000, guid: 44c5f95f341a41044824919b30cc7a0d, type: 3}
 --- !u!1 &54673304761254125 stripped
 GameObject:
@@ -191,6 +170,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c94ce859727d0499549b39e8c5f374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1951527736063031587
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54673304761254125}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.15
+  m_Height: 5
+  m_Direction: 1
+  m_Center: {x: 0.12, y: 2.3, z: 0}
 --- !u!4 &831456981398952535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 44c5f95f341a41044824919b30cc7a0d, type: 3}
