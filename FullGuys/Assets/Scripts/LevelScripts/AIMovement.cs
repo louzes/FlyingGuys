@@ -21,6 +21,7 @@ public class AIMovement : MonoBehaviour
         SetPoints(transform);
         transform.rotation = Quaternion.LookRotation(wayPoints[index].transform.position - transform.position);
     }
+
     public void SetPoints(Transform transform)
     {
         Vector3 destination = wayPoints[index].transform.position;
@@ -53,8 +54,4 @@ public class AIMovement : MonoBehaviour
             wayPoints = Way.RouteTwo;
         }
     }
-    //public void SetPoint(Transform pointParent)
-    //{
-    //    var _points = new Transform[pointParent.childCount];
-    //}
 }

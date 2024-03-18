@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3313970653177009132}
   - component: {fileID: -2912307700423306211}
   - component: {fileID: 1176299728294826330}
+  - component: {fileID: -5913800076755985283}
   m_Layer: 0
   m_Name: Treestor_Big
   m_TagString: AI
@@ -74,6 +75,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+--- !u!136 &-5913800076755985283
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991621087078153679}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.15
+  m_Height: 5
+  m_Direction: 1
+  m_Center: {x: 0.12, y: 2.3, z: 0}
 --- !u!1001 &7116887393076304307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -145,9 +169,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 608b5a873bd718c4f92fe913c4e4032d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4902742178194795110}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 608b5a873bd718c4f92fe913c4e4032d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6622107706580696798}
   m_SourcePrefab: {fileID: 100100000, guid: 608b5a873bd718c4f92fe913c4e4032d, type: 3}
 --- !u!4 &7300047052576767576 stripped
 Transform:
@@ -171,26 +192,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c94ce859727d0499549b39e8c5f374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &6622107706580696798
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7927789660611929314}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.15
-  m_Height: 5
-  m_Direction: 1
-  m_Center: {x: 0.12, y: 2.3, z: 0}

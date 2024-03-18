@@ -10,7 +10,6 @@ public class ThirdPersonCam : MonoBehaviour
     [SerializeField] private Rigidbody rb;
 
     public float rotationSpeed;
-
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;

@@ -48,7 +48,7 @@ public class CharacterSelect : MonoBehaviour
     public void ActivateCharacter()
     {
         PlayerPrefs.SetInt("CharacterSelect", _index);
-        SceneManager.LoadScene(1);
+        SceneSelect.Instance.LevelOne();
     }
 
 

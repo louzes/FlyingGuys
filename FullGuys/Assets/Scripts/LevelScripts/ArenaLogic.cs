@@ -12,10 +12,10 @@ public class ArenaLogic : MonoBehaviour
     [SerializeField] private float timerDuration = 3f;
 
     [Header("Hitting Box")]
-    [SerializeField]private Transform chargePoint;
-    [SerializeField]private Transform hitPoint;
-    [SerializeField]private float normalSpeed = 5f;
-    [SerializeField]private float chargingSpeed = 10f;
+    [SerializeField] private Transform chargePoint;
+    [SerializeField] private Transform hitPoint;
+    [SerializeField] private float normalSpeed = 5f;
+    [SerializeField] private float chargingSpeed = 10f;
 
     private Transform targetPoint;
     private float currentSpeed;
@@ -32,24 +32,27 @@ public class ArenaLogic : MonoBehaviour
             Destroy(TriggerWall);
             print("Wall is down");
         }
-            
+
         if (gameObject.layer == 7) //water
         {
-            if (other.transform.parent != null)
+            if (other != null)
             {
-                Destroy(other.transform.parent.gameObject);
-                print(other.transform.parent + "is destroyed");
-                return; 
+                Destroy(other.transform.gameObject);
             }
-            Destroy(other);
+            //if (other.transform.parent != null)
+            //{
+            //    Destroy(other.transform.parent.gameObject);
+            //    print(other.transform.parent + "is destroyed");
+            //    return; 
+            //}
         }
-            
+
         if (gameObject.layer == 8 && _tpDestination != null) //teleport
         {
-            other.transform.parent.position = _tpDestination.transform.position;
+            other.transform.position = _tpDestination.transform.position;
             print("Teleport!");
         }
-            
+
     }
     private void Update()
     {
@@ -73,8 +76,8 @@ public class ArenaLogic : MonoBehaviour
                         currentSpeed = chargingSpeed;
                     }
                 }
-            }          
-        }      
+            }
+        }
     }
     private void OnDrawGizmos()
     {
