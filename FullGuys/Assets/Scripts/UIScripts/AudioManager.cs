@@ -3,20 +3,35 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [Header("Audio Source")]
-    [SerializeField] private AudioSource _musicSource;
-    [SerializeField] private AudioSource _sfxSource;
+    public AudioSource MusicSource;
+    public AudioSource SfxSource;
     [Header("Audio Clip")]
-    [SerializeField] private AudioClip _roar;
-    [SerializeField] private AudioClip _background;
-    [Space]
-    [SerializeField] private AudioClip _clickButton;
+    public AudioClip PlayerDeath;
+    public AudioClip Background;
+    public AudioClip FootSteps;
+    public AudioClip Teleport;
+    public AudioClip Victory;
+    public AudioClip Bloop;
+    [Space(20f)]
+    public AudioClip ClickButton;
     void Start()
     {
-        _musicSource.clip = _background;
-        _musicSource.Play();
+        MusicSource.clip = Background;
+        MusicSource.Play();
     }
     public void PlaySFX(AudioClip clip)
     {
-        _sfxSource.PlayOneShot(clip);
+        SfxSource.PlayOneShot(clip);
+    }
+    public void StopMusic(bool state)
+    {
+        if (state)
+        {
+            MusicSource.Pause();
+        }
+        else
+        {
+            MusicSource.UnPause();
+        }
     }
 }

@@ -10,6 +10,6 @@ public class AnimationController : MonoBehaviour
     private void Update()
     {
         _animator.SetBool("Running", Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S));
-        _animator.SetBool("Jumping", Input.GetKey(KeyCode.Space));
+        _animator.SetBool("Jumping", Input.GetKeyDown(KeyCode.Space));       
     }
 }

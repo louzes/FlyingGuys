@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ArenaLogic : MonoBehaviour
 {
@@ -19,7 +21,12 @@ public class ArenaLogic : MonoBehaviour
 
     private Transform targetPoint;
     private float currentSpeed;
+    private AudioManager _audioManager;
 
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
     private void Start()
     {
         targetPoint = chargePoint;
@@ -37,18 +44,17 @@ public class ArenaLogic : MonoBehaviour
         {
             if (other != null)
             {
+                if(other.transform.tag.Equals("Player"))
+                {
+                    StartCoroutine(Delay());
+                }
                 Destroy(other.transform.gameObject);
             }
-            //if (other.transform.parent != null)
-            //{
-            //    Destroy(other.transform.parent.gameObject);
-            //    print(other.transform.parent + "is destroyed");
-            //    return; 
-            //}
         }
 
         if (gameObject.layer == 8 && _tpDestination != null) //teleport
         {
+            _audioManager.PlaySFX(_audioManager.Teleport);
             other.transform.position = _tpDestination.transform.position;
             print("Teleport!");
         }
@@ -78,6 +84,15 @@ public class ArenaLogic : MonoBehaviour
                 }
             }
         }
+    }
+    IEnumerator Delay()
+    {
+        _audioManager.StopMusic(true);
+        _audioManager.PlaySFX(_audioManager.Bloop);
+        yield return new WaitForSeconds(.5f);
+        _audioManager.PlaySFX(_audioManager.PlayerDeath);
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(0);
     }
     private void OnDrawGizmos()
     {

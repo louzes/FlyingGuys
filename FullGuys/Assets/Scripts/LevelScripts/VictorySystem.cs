@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using System.Collections;
 
 public class VictorySystem : MonoBehaviour
 {
@@ -12,7 +11,12 @@ public class VictorySystem : MonoBehaviour
     [SerializeField] private Text _text02;
 
     private List<GameObject> _finishOrder = new List<GameObject>();
+    private AudioManager _audioManager;
 
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
     private void Start() => _winPanel.SetActive(false);
 
     private void OnTriggerEnter(Collider other)
@@ -27,6 +31,7 @@ public class VictorySystem : MonoBehaviour
                 {
                     if (_text01 != null && _text02 != null)
                     {
+                        _audioManager.PlaySFX(_audioManager.Victory);
                         _text01.text = "1 / 8";
                         _text02.text = "Perfect!";
                         _winPanel.SetActive(true);
@@ -47,7 +52,7 @@ public class VictorySystem : MonoBehaviour
                 }
             }
             if (other.CompareTag("AI"))
-            {               
+            {
                 print("Bot detected");
                 _finishOrder.Add(other.gameObject);
                 other.gameObject.SetActive(false);
@@ -62,6 +67,6 @@ public class VictorySystem : MonoBehaviour
     }
     private void CoroutineStarter()
     {
-        StartCoroutine(BackToMenu());       
+        StartCoroutine(BackToMenu());
     }
 }
